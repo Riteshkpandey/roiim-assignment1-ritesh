@@ -1,0 +1,417 @@
+<head>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            //<img src="" alt="Girl in a jacket" style="width:500px;height:600px;">
+        }
+
+        /* Text Align */
+        .text-c {
+            text-align: center;
+        }
+        .text-l {
+            text-align: left;
+        }
+        .text-r {
+            text-align: right
+        }
+        .text-j {
+            text-align: justify;
+        }
+
+        /* Text Color */
+        .text-whitesmoke {
+            color: whitesmoke
+        }
+        .text-darkyellow {
+            color: rgba(255, 235, 59, 0.432)
+        }
+
+        /* Lines */
+
+        .line-b {
+            border-bottom: 1px solid #FFEB3B !important;
+        }
+
+        /* Buttons */
+        .button {
+            border-radius: 4px;
+        }
+        .form-button {
+            background-color: rgba(255, 235, 59, 0.24);
+            border-color: rgba(255, 235, 59, 0.24);
+            color: #FAFAD2;
+        }
+        .form-button:active,
+        .form-button:hover,
+        .form-button.active,
+        .form-button:focus,
+        .form-button:active:focus,
+        .form-button:active:hover,
+        .form-button.active:hover,
+        .form-button.active:focus {
+            background-color: rgba(255, 235, 59, 0.473);
+            border-color: rgba(255, 235, 59, 0.473);
+            color: #e6e6e6;
+        }
+        .button-l {
+            width: 100% !important;
+        }
+
+        /* Margins g(global) - l(left) - r(right) - t(top) - b(bottom) */
+
+        .margin-g {
+            margin: 5px;
+        }
+        .margin-g-sm {
+            margin: 5px;
+        }
+        .margin-g-md {
+            margin: 10px;
+        }
+        .margin-g-lg {
+            margin: 15px;
+        }
+
+        .margin-l {
+            margin-left: 15px;
+        }
+        .margin-l-sm {
+            margin-left: 10px;
+        }
+        .margin-l-md {
+            margin-left: 20px;
+        }
+        .margin-l-lg {
+            margin-left: 30px;
+        }
+
+        .margin-r {
+            margin-right: 15px;
+        }
+        .margin-r-sm {
+            margin-right: 10px;
+        }
+        .margin-r-md {
+            margin-right: 20px;
+        }
+        .margin-r-lg {
+            margin-right: 30px;
+        }
+
+        .margin-t {
+            margin-top: 5px;
+        }
+        .margin-t-sm {
+            margin-top: 5px;
+        }
+        .margin-t-md {
+            margin-top: 10px;
+        }
+        .margin-t-lg {
+            margin-top: 15px;
+        }
+
+        .margin-b {
+            margin-bottom: 5px;
+        }
+        .margin-b-sm {
+            margin-bottom: 5px;
+        }
+        .margin-b-md {
+            margin-bottom: 10px;
+        }
+        .margin-b-lg {
+            margin-bottom: 15px;
+        }
+
+        /* control section for bootstrap */
+
+        .form-control,
+        .border-line {
+            background-color: #00FFFF;
+            background-image: none;
+            border: 1px solid #424242;
+            border-radius: 1px;
+            color: inherit;
+            display: block;
+            padding: 6px 12px;
+            transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+            width: 100%;
+        }
+        .form-control:focus,
+        .border-line:focus {
+            border-color: #FFEB3B;
+            background-color: #FF0000;
+            color: #e6e6e6;
+        }
+        .form-control,
+        .form-control:focus {
+            box-shadow: none;
+        }
+        .form-control::-webkit-input-placeholder { color: #BDBDBD; }
+
+        /* Container */
+
+        .container-content {
+            background-color:#00FFFF;
+            color: inherit;
+            padding: 15px 5px 5px 20px;
+            border-color: #FFEB3B;
+            border-image: none;
+            border-style: solid solid none;
+            border-width: 1px 0;
+        }
+
+        /* Backgrounds */
+
+        .main-bg {
+
+            background: #000000;
+            //linear-gradient(#000000,#000000),
+            background: linear-gradient(#000000,#000000);
+        }
+
+        /* Login & Register Pages*/
+
+        .login-container {
+            max-width: 400px;
+            z-index: 100;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        .login.login-container {
+            width: 300px;
+        }
+        .wrapper.login-container {
+            margin-top: 5px;
+        }
+        .logo-badge {
+            color: #e6e6e6;
+            font-size: 80px;
+            font-weight: 800;
+            letter-spacing: -10px;
+            margin-bottom: 0;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/templates/static/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/templates/static/css/main.css">
+    <script src="https://hosted.test.paysafe.com/checkout/v2/paysafe.checkout.min.js"></script>
+
+</head>
+<body class="main-bg">
+<div class="login-container text-c animated flipInX">
+    <div>
+        <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
+    </div>
+    <h3 class="text-whitesmoke">WELCOME TO PAYSAFE!!!</h3>
+    <p class="text-whitesmoke">ROIIM ASSIGNMENT</p>
+    <div class="container-content">
+        <form class="margin-t" >
+            <div class="form-group">
+                <input  type="email" placeholder="example@gmail.com" class="form-control" value=""  id="email"
+                        required>
+            </div>
+
+            <div class="form-group" >
+                <input required type="text" placeholder="FirstName" class="form-control" value="" id="firstName">
+            </div>
+            <div class="form-group">
+                <input required type="text" placeholder="LastName" class="form-control" value="" id="lastName">
+            </div>
+
+            <div class="form-group">
+                <input required type="text" class="form-control" id="inputAddress" value=""
+                       placeholder="1234 Main St">
+            </div>
+            <div class="form-group ">
+                <input required placeholder="Phone Number" type="number" class="form-control" value="" id="inputPhone">
+            </div>
+            <div class="form-group ">
+                <input required placeholder="City" type="text" class="form-control" value="" id="inputCity">
+            </div>
+            <div class="form-group ">
+                <input required placeholder="Zip" type="number" class="form-control" value="" id="inputZip">
+            </div>
+            <div class="form-group ">
+                <input required placeholder="Amount" type="number" class="form-control" value="" id="inputAmount">
+            </div>
+
+
+
+
+
+
+            <button type="submit" class="form-button button-l margin-b">Start Paying</button>
+
+            <!--            <a class="text-darkyellow" href="#"><small>Forgot your password?</small></a>-->
+            <!--            <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>-->
+            <!--            <a class="text-darkyellow" href="#"><small>Sign Up</small></a>-->
+        </form>
+        <p class="margin-t text-whitesmoke"><small> </small> </p>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("button").click(function (event) {
+            event.preventDefault();
+            onPay()
+        });
+    });
+
+    var awsUrl = "http://Paysafehelper-env.eba-pehyeyyj.us-west-2.elasticbeanstalk.com";
+    //var localUrl = "https://roiim-cardpayment.herokuapp.com";
+    var localUrl = "https://localhost:8080";
+    //var localUrl = "http://18.222.211.178:8080"
+    var baseUrl= localUrl;
+    async function onPay() {
+        let email = document.getElementById("email").value;
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let phone = document.getElementById("inputPhone").value;
+
+        //billing address
+        let city = document.getElementById("inputCity").value;
+        let zip = document.getElementById("inputZip").value;
+        let street = document.getElementById("inputAddress").value;
+        //amount
+        let amount = document.getElementById("inputAmount").value;
+        console.log("In pay function");
+        requestBody = {
+            "firstName": firstName,
+            "lastName":lastName,
+            "email": email,
+            "phone":phone
+        }
+        $.ajax({
+
+            url: baseUrl+"/SingleUseCustomerToken2/",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(requestBody,),
+            success: function (result) {
+                if (result.status === "OK" && result.data != null) {
+                    console.log("result of get single token:")
+                    console.log(result);
+                    billingAddress = {
+                        city: city,
+                        street: street,
+                        zip: zip,
+                        country: 'US',
+                        state: 'CA'
+                    }
+                    customer = {
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        phone: phone,
+                        dateOfBirth: {
+                            day: 1,
+                            month: 6,
+                            year: 1989
+                        }
+                    }
+                    checkout(result.data.singleUseCustomerToken, billingAddress, customer, amount, result.data.merchantRefNum)
+                }
+                else {
+                    alert("Please keep in mind -----" + result.message)
+                }
+            }
+        });
+
+    }
+
+    function checkout(token, billingAddress, customer, amount, uuid) {
+
+        console.log( "In Checkout function" );
+        console.log( token );
+        console.log( uuid );
+        paysafe.checkout.setup("cHVibGljLTc3NTE6Qi1xYTItMC01ZjAzMWNiZS0wLTMwMmQwMjE1MDA4OTBlZjI2MjI5NjU2M2FjY2QxY2I0YWFiNzkwMzIzZDJmZDU3MGQzMDIxNDUxMGJjZGFjZGFhNGYwM2Y1OTQ3N2VlZjEzZjJhZjVhZDEzZTMwNDQ=", {
+            "currency": "USD",
+            "amount": parseInt(amount) * 100,
+            "singleUseCustomerToken": token,
+
+            "customer": customer,
+            "billingAddress": billingAddress,
+            "paymentMethodDetails": {
+                "paysafecard": {
+                    "consumerId": "1232323"
+                },
+            },
+            "environment": "TEST",
+            "merchantRefNum": uuid,
+            "canEditAmount": false,
+            "payout": false,
+            "payoutConfig": {
+                "maximumAmount": 10000
+            }
+        }, function (instance, error, result) {
+
+            console.log( "in call back function" );
+            if (result && result.paymentHandleToken) {
+
+                console.log( result.paymentHandleToken );
+                console.log("result of checkout")
+                console.log(result);
+                requestBody = {
+                    "merchantRefNum": uuid,
+                    "paymentHandleToken": result.paymentHandleToken,
+                    "amount": result.amount,
+                    "settleWithAuth": false,
+                    "currencyCode": "USD",
+                    "dupCheck": true,
+                    "description": "Casino subscription"
+                }
+                console.log("request body for payment process")
+                console.log(requestBody)
+                $.ajax({
+                    type: "POST",
+                    url: baseUrl+"/MakePayment/" + customer.email,
+                    contentType: "application/json",
+                    data: JSON.stringify(requestBody,),
+                    success: (data) => {
+                        console.log("result of process payment:")
+                        console.log(data);
+
+                        if (data.status === "OK" && data.data != null) {
+                            instance.showSuccessScreen("Payment Done Successfully!");
+                        }
+                        else {
+                            instance.showFailureScreen("Payment was declined. Try again with the same or another payment method.");
+                        }
+                        setTimeout(function(){window.location.replace(window.location.href);}, 10000);
+
+                    }
+                });
+            }
+            else {
+                alert("Please keep in mind -----" + error.detailedMessage)
+                console.error("error :" + error);
+            }
+        }, function (stage, expired) {
+            switch (stage) {
+                case "PAYMENT_HANDLE_NOT_CREATED": // Handle the scenario
+                case "PAYMENT_HANDLE_CREATED": // Handle the scenario
+                case "PAYMENT_HANDLE_REDIRECT": // Handle the scenario
+                case "PAYMENT_HANDLE_PAYABLE": // Handle the scenario
+                default: // Handle the scenario
+            }
+        });
+    }
+</script>
+</body>
+</html>
